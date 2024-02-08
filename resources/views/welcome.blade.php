@@ -1,1 +1,1 @@
-<h1>hello world</h1>
+<a href="{{route('category.create')}}">Category</a>
