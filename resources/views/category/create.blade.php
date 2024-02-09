@@ -10,13 +10,23 @@
     <div class="container">
         <div class="row">
             <div class="col-10 max-auto">
-                <form action="" method="POST">
-                    @csrf
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-sm btn-outline-primary">Submit</button>
-                </form>
+               <div class="card">
+                <div class="card-header">
+                    <h4>Category Create</h4>
+                </div>
+                <div class="card-body">
+                    <form action="{{route('category.store')}}" method="POST">
+                        @csrf
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control">
+                            @if($errors->has('name'))
+                            <span class="text-danger">{{$errors->first('name')}}</span>
+                            @endif
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-outline-primary">Submit</button>
+                    </form>
+                </div>
+               </div>
             </div>
 
         </div>

@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/category/create', [categoryController::class, 'create'])->name('category.create');
-
+Route::post('/category/store', [categoryController::class, 'store'])->name('category.store');
